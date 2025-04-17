@@ -6,8 +6,8 @@ export default function Home() {
     <div className="min-h-screen bg-black text-white">
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-3xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            <span className="text-amber-400">Question</span> Practice <span className="text-green-400">App</span>
+          <h1 className="text-2xl md:text-6xl font-bold mb-6">
+            <span className="text-amber-400">NPTEL</span> Question <span className="text-green-400">Practice</span>
           </h1>
           <p className="text-xl mb-12 text-gray-300">
             Enhance your learning with timed practice sessions organized by week.
