@@ -21,14 +21,14 @@ export default function Home() {
             </div>
             <div className="bg-gray-900 p-6 rounded-lg border border-green-400">
               <FaBook className="text-green-400 text-4xl mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Organized Content</h3>
-              <p className="text-gray-400">Questions organized by week for structured learning</p>
-            </div>
-            <div className="bg-gray-900 p-6 rounded-lg border border-white/30">
-              <FaGraduationCap className="text-white text-4xl mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-2">Track Progress</h3>
               <p className="text-gray-400">Monitor your scores and improvement over time</p>
             </div>
+            {/* <div className="bg-gray-900 p-6 rounded-lg border border-white/30">
+              <FaGraduationCap className="text-white text-4xl mx-auto mb-4" />
+              <h3 className="text-xl font-semibold mb-2">Track Progress</h3>
+              <p className="text-gray-400">Monitor your scores and improvement over time</p>
+            </div> */}
           </div>
           
           <Link href="/practice" 
