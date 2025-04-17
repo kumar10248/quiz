@@ -13,6 +13,11 @@ export default function Home() {
             Enhance your learning with timed practice sessions organized by week.
           </p>
            */}
+           <Link href="/practice" 
+            className="inline-block bg-amber-500 hover:bg-amber-600 text-black font-bold py-3 px-8 rounded-lg transition duration-300 text-lg">
+            Start Practicing
+          </Link>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             <div className="bg-gray-900 p-6 rounded-lg border border-amber-400">
               <FaClock className="text-amber-400 text-4xl mx-auto mb-4" />
@@ -24,13 +29,14 @@ export default function Home() {
               <h3 className="text-xl font-semibold mb-2">Track Progress</h3>
               <p className="text-gray-400">Monitor your scores and improvement over time</p>
             </div>
-            
+            <div className="bg-gray-900 p-6 rounded-lg border border-white/30">
+              <FaGraduationCap className="text-white text-4xl mx-auto mb-4" />
+              <h3 className="text-xl font-semibold mb-2">Track Progress</h3>
+              <p className="text-gray-400">Monitor your scores and improvement over time</p>
+            </div>
           </div>
           
-          <Link href="/practice" 
-            className="inline-block bg-amber-500 hover:bg-amber-600 text-black font-bold py-3 px-8 rounded-lg transition duration-300 text-lg">
-            Start Practicing
-          </Link>
+          
         </div>
       </div>
     </div>
