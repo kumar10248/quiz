@@ -282,12 +282,12 @@ export default function QuestionPracticePage() {
                 ))}
               </div>
               
-              {isAnswered && currentQuestion?.explanation && (
+              {/* {isAnswered && currentQuestion?.explanation && (
                 <div className="mt-6 p-4 rounded-md bg-gray-800">
                   <h3 className="font-semibold text-green-400 mb-2">Explanation:</h3>
                   <p>{currentQuestion.explanation}</p>
                 </div>
-              )}
+              )} */}
             </div>
             
             {/* Navigation buttons */}
