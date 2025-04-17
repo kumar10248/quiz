@@ -15,9 +15,14 @@ export default function QuestionPracticePage() {
   const [selectedOption, setSelectedOption] = useState<number | null>(null);
   const [isAnswered, setIsAnswered] = useState(false);
   const [score, setScore] = useState(0);
+  const scoreRef = useRef(score);
+  useEffect(() => {
+    scoreRef.current = score;
+  }, [score]);
+  
   const [timeRemaining, setTimeRemaining] = useState(0);
   const [showSidebar, setShowSidebar] = useState(false);
-  const [sessionStarted, setSessionStarted] = useState(false);
+ 
   const [isLoading, setIsLoading] = useState(true);
   const [loadingError, setLoadingError] = useState<string | null>(null);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
@@ -63,14 +68,14 @@ export default function QuestionPracticePage() {
               if (timerRef.current) {
                 clearInterval(timerRef.current);
               }
-              router.push(`/results?score=${score}&total=${loadedQuestions.length}&mode=${mode}&timeUp=true`);
+            router.push(`/results?score=${scoreRef.current}&total=${loadedQuestions.length}&mode=${mode}&timeUp=true`);
               return 0;
             }
             return prevTime - 1;
           });
         }, 1000);
         
-        setSessionStarted(true);
+     
         setIsLoading(false);
         setLoadingError(null);
       } catch (error) {

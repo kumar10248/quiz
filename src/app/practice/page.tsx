@@ -2,12 +2,12 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { FaCode, FaClipboardCheck, FaLayerGroup } from 'react-icons/fa';
+import {  FaClipboardCheck, FaLayerGroup } from 'react-icons/fa';
 import { PracticeMode } from '../types';
 
 export default function PracticeSelectionPage() {
   const router = useRouter();
-  const [selectedMode, setSelectedMode] = useState<PracticeMode | ''>('');
+  const [selectedMode, setSelectedMode] = useState<PracticeMode | null>(null);
 
   const handleStart = () => {
     if (selectedMode) {
@@ -15,7 +15,6 @@ export default function PracticeSelectionPage() {
     }
   };
 
-  // Create an array of week numbers 1-8
   const weekNumbers = Array.from({ length: 8 }, (_, i) => i + 1);
 
   return (
@@ -36,20 +35,23 @@ export default function PracticeSelectionPage() {
           <div className="mb-8">
             <h3 className="text-lg font-medium mb-4 text-amber-400">Weekly Practice</h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {weekNumbers.map((weekNum) => (
-                <button
-                  key={`week${weekNum}`}
-                  className={`p-4 rounded-lg transition flex flex-col items-center justify-center ${
-                    selectedMode === `week${weekNum}` as PracticeMode
-                      ? 'bg-amber-500 text-black'
-                      : 'bg-gray-800 hover:bg-gray-700'
-                  }`}
-                  onClick={() => setSelectedMode(`week${weekNum}` as PracticeMode)}
-                >
-                  <span className="text-3xl mb-2">W{weekNum}</span>
-                  <span className="text-sm">Week {weekNum}</span>
-                </button>
-              ))}
+              {weekNumbers.map((weekNum) => {
+                const mode = `week${weekNum}` as PracticeMode;
+                return (
+                  <button
+                    key={mode}
+                    className={`p-4 rounded-lg transition flex flex-col items-center justify-center ${
+                      selectedMode === mode
+                        ? 'bg-amber-500 text-black'
+                        : 'bg-gray-800 hover:bg-gray-700'
+                    }`}
+                    onClick={() => setSelectedMode(mode)}
+                  >
+                    <span className="text-3xl mb-2">W{weekNum}</span>
+                    <span className="text-sm">Week {weekNum}</span>
+                  </button>
+                );
+              })}
             </div>
           </div>
 
@@ -71,7 +73,9 @@ export default function PracticeSelectionPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg mb-2">Assignment Review</h3>
-                    <p className="text-sm opacity-80">Practice questions related to course assignments and projects.</p>
+                    <p className="text-sm opacity-80">
+                      Practice questions related to course assignments and projects.
+                    </p>
                   </div>
                 </div>
               </button>
@@ -90,7 +94,9 @@ export default function PracticeSelectionPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg mb-2">All Questions</h3>
-                    <p className="text-sm opacity-80">Review all questions from every week and assignment in one session.</p>
+                    <p className="text-sm opacity-80">
+                      Review all questions from every week and assignment in one session.
+                    </p>
                   </div>
                 </div>
               </button>
