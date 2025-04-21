@@ -907,8 +907,468 @@ export function getAllQuestions(mode: PracticeMode): Question[] {
           "correctAnswer": 2
         }
       
-    ]
+    ],
+    assignment: [
+      
+        {
+          "question": "Which of the following is a building block of edge computing?",
+          "options": [
+            "Data ingestion and stream processing",
+            "Centralized data centers",
+            "High-bandwidth CDN",
+            "Traditional three-tier architecture"
+          ],
+          "explanation": "Edge computing requires efficient data ingestion (e.g., using Kafka) and stream processing for real-time data analysis. These are key building blocks for processing data at the edge, as opposed to sending data to the cloud for processing.",
+          "correctAnswer": 0
+        },
+        {
+          "question": "What is the primary advantage of edge computing compared to traditional cloud computing?",
+          "options": [
+            "Increased storage capacity",
+            "Reduced latency by avoiding round-trips to the cloud",
+            "Better hardware virtualization",
+            "More centralized control over resources"
+          ],
+          "explanation": "Edge computing reduces latency by processing data closer to the source (devices/sensors) rather than sending it to remote cloud data centers and waiting for a response. This avoids round-trip delays that are problematic for time-sensitive applications.",
+          "correctAnswer": 1
+        },
+        {
+          "question": "In the edge computing three-tier architecture, what are the three tiers?",
+          "options": [
+            "Frontend, middleware, and backend",
+            "Data, application, and presentation",
+            "Data Source, Intelligence, and Actionable Insight",
+            "Client, server, and database"
+          ],
+          "explanation": "The edge computing three-tier architecture consists of the Data Source tier (origin of data from devices/sensors), Intelligence tier (ML models running across cloud and edge), and Actionable Insight tier (alerts, dashboards, automated actions).",
+          "correctAnswer": 2
+        },
+        {
+          "question": "How does edge computing handle machine learning compared to traditional cloud computing?",
+          "options": [
+            "ML is not possible in edge computing environments",
+            "Both training and inference happen exclusively on the edge",
+            "Training typically happens in the cloud while inference runs on the edge",
+            "All ML workloads are shifted to the cloud"
+          ],
+          "explanation": "In the edge-cloud architecture for ML, training of models typically happens in the cloud (which has more computational resources) while inference (running the trained models) happens on the edge to reduce latency and enable operation in offline scenarios.",
+          "correctAnswer": 2
+        },
+        {
+          "question": "Which statement best describes how edge computing relates to data sovereignty?",
+          "options": [
+            "Edge computing makes data sovereignty irrelevant",
+            "Edge computing brings data sovereignty by keeping data where it actually belongs",
+            "Edge computing requires all data to be processed in the cloud",
+            "Edge computing centralizes all data processing"
+          ],
+          "explanation": "Edge computing enhances data sovereignty by enabling data to remain where it belongs (e.g., sensitive healthcare data staying within hospital premises) while still allowing processing and analysis to occur locally without sending it to remote cloud servers.",
+          "correctAnswer": 1
+        },
+        {
+          "question": "What challenge of IoT-PaaS led to the development of edge computing?",
+          "options": [
+            "Excessive data storage costs",
+            "Lack of processing capabilities",
+            "Long round-trip latency from devices to cloud and back",
+            "Limited programming interfaces"
+          ],
+          "explanation": "A key challenge with IoT-PaaS was the long round-trip latency from sending data from devices to the cloud and waiting for results to come back. This was unacceptable for mission-critical industrial IoT scenarios, leading to edge computing where data could be processed locally.",
+          "correctAnswer": 2
+        },
+        {
+          "question": "Which of the following best describes the evolution of cloud computing?",
+          "options": [
+            "Cloud → IoT → Edge → ML",
+            "ML → Edge → IoT → Cloud",
+            "IoT → Cloud → Edge → ML",
+            "Edge → Cloud → IoT → ML"
+          ],
+          "explanation": "The evolution of cloud computing progressed from traditional cloud (centralized VMs and storage) to IoT (connecting devices to cloud) to Edge (bringing compute closer to data sources) to ML at the edge (running trained models locally).",
+          "correctAnswer": 0
+        },
+        {
+          "question": "Which of the following is NOT a building block of edge computing?",
+          "options": [
+            "Function as a Service",
+            "M2M Brokers",
+            "Hypervisor management layer",
+            "NoSQL/Time-Series Database"
+          ],
+          "explanation": "The hypervisor management layer is not listed as a building block of edge computing. Edge computing building blocks include Data Ingestion, M2M Brokers, Object Storage, Function as a Service, NoSQL/Time-Series Database, Stream Processing, and ML Models.",
+          "correctAnswer": 2
+        },
+        {
+          "question": "In the context of edge computing, where does 'inferencing' typically occur?",
+          "options": [
+            "Only in the cloud",
+            "Only at the data center",
+            "At the edge",
+            "Only at the data source"
+          ],
+          "explanation": "In the edge computing paradigm, inferencing (running trained ML models to make predictions or decisions) typically occurs at the edge, closer to the data sources, while training of models usually happens in the cloud.",
+          "correctAnswer": 2
+        },
+        {
+          "question": "What is the relationship between edge computing and content delivery networks (CDNs)?",
+          "options": [
+            "They are the same thing",
+            "CDNs have replaced edge computing",
+            "Edge computing is a subset of CDN technology",
+            "CDNs complement cloud storage but are different from the edge computing concept"
+          ],
+          "explanation": "While both involve distributed infrastructure, CDNs primarily cache content closer to users for faster delivery, whereas edge computing involves actual computation and processing of data closer to sources. The notes clarify that CDN 'edge' is not the same as the edge computing concept being discussed.",
+          "correctAnswer": 3
+        },
+
+        
+  {
+    "question": "What is a primary reason for deploying machine learning at the edge rather than in the cloud?",
+    "options": [
+      "More storage capacity",
+      "Reduced latency and faster response time",
+      "Better model training capabilities",
+      "Higher computational power"
+    ],
+    "explanation": "Edge ML reduces latency by processing data locally (at the device level) rather than sending data to remote cloud servers and waiting for responses. This enables real-time responses which are critical for many IoT applications such as industrial control systems and autonomous vehicles.",
+    "correctAnswer": 1
+  },
+  {
+    "question": "Which of the following is NOT an advantage of Edge ML?",
+    "options": [
+      "Real-time analytics",
+      "Enhanced model training capacity",
+      "Improved data security",
+      "Reduced bandwidth requirements"
+    ],
+    "explanation": "Edge ML typically handles inference (running trained models) rather than training, which still often occurs in the cloud due to the computational resources required. The other options are actual advantages: real-time analytics occurs by processing data locally, data security improves by keeping sensitive data local, and bandwidth requirements decrease by only sending processed/filtered data to the cloud.",
+    "correctAnswer": 1
+  },
+  {
+    "question": "Which three essential capabilities does the edge layer deliver for IoT applications?",
+    "options": [
+      "Local data processing, filtered data transfer to cloud, and faster decision-making",
+      "Model training, cloud storage, and centralized data analysis",
+      "Device coordination, network security, and data archiving",
+      "System administration, user authentication, and batch processing"
+    ],
+    "explanation": "The edge layer delivers three essential capabilities: (1) local data processing to handle increasing amounts of data from sensors, (2) filtered data transfer to cloud which saves bandwidth and cloud storage costs, and (3) faster decision-making by deploying ML models trained in the cloud at the edge for inference.",
+    "correctAnswer": 0
+  },
+  {
+    "question": "What is a significant challenge that specialized processors like GPUs address in edge computing?",
+    "options": [
+      "Network connectivity issues",
+      "Data storage limitations",
+      "Speed of ML model inferencing",
+      "Battery life of edge devices"
+    ],
+    "explanation": "Specialized processors like GPUs, NPUs from manufacturers such as Qualcomm, NVIDIA, and ARM are designed to address the performance challenges of running ML models on edge devices. They accelerate inference by taking over complex mathematical calculations needed for running deep learning models, resulting in faster prediction, detection, and classification of data.",
+    "correctAnswer": 2
+  },
+  {
+    "question": "In the ML on edge IoT workflow, what occurs after collecting and preparing the training data?",
+    "options": [
+      "Immediate deployment to edge devices",
+      "Data deletion for security purposes",
+      "Experimentation with different ML algorithms to build a model",
+      "Real-time analytics without model creation"
+    ],
+    "explanation": "After collecting and preparing training data, the next step in the edge ML workflow is to experiment with different machine learning algorithms and parameters to train models and compare their results. This experimentation phase helps select the best performing model before deployment to edge devices.",
+    "correctAnswer": 2
+  },
+  {
+    "question": "Which step in the Azure IoT Edge deployment process involves creating containers for data transformation, insight generation, and action?",
+    "options": [
+      "Edge Runtime Manifestation",
+      "Migrating Workload",
+      "Packaging modules as Docker containers",
+      "Cloud IoT-Hub configuration"
+    ],
+    "explanation": "The first step in the Edge ML Platform deployment process is to package the data transform, insight, and action modules as Docker containers. These containers are then pushed to a container registry, targeted for deployment through a workload description, and finally downloaded and run by the IoT edge runtime on the edge device.",
+    "correctAnswer": 2
+  },
+  {
+    "question": "Which computer vision model significantly improved object detection speed by introducing the Region Proposal Network (RPN)?",
+    "options": [
+      "R-CNN",
+      "Fast R-CNN",
+      "Faster R-CNN",
+      "YOLO"
+    ],
+    "explanation": "Faster R-CNN introduced the Region Proposal Network (RPN) to replace the slow selective search algorithm used in previous models. The RPN is a fast neural network that uses a sliding window approach with anchor boxes to generate region proposals, significantly improving detection speed while maintaining accuracy.",
+    "correctAnswer": 2
+  },
+  {
+    "question": "What key advantage does YOLO (You Only Look Once) have over the R-CNN family of algorithms?",
+    "options": [
+      "Higher accuracy in all scenarios",
+      "Better handling of small objects",
+      "Significantly faster real-time detection speed",
+      "Lower computational requirements"
+    ],
+    "explanation": "YOLO (You Only Look Once) is known for its significantly faster real-time object detection capabilities (45 frames per second) compared to the R-CNN family. Unlike R-CNN models that apply detection to multiple regions, YOLO processes the entire image just once through the neural network, predicting bounding boxes and class probabilities simultaneously.",
+    "correctAnswer": 2
+  },
+  {
+    "question": "What metric evaluates the overlap between a predicted bounding box and the ground truth bounding box in object detection?",
+    "options": [
+      "Mean Average Precision (mAP)",
+      "Intersection Over Union (IOU)",
+      "Recall Rate",
+      "F1 Score"
+    ],
+    "explanation": "Intersection Over Union (IOU) is the metric that evaluates the overlap between a predicted bounding box and the ground truth bounding box. It is calculated by dividing the area of intersection by the area of union between the two boxes. IOU is fundamental for determining whether a detection is correct (True Positive) based on a threshold value.",
+    "correctAnswer": 1
+  },
+  {
+    "question": "In the context of Azure Custom Vision, what is transfer learning?",
+    "options": [
+      "Moving data from cloud to edge devices",
+      "Applying knowledge gained from solving one problem to a different but related situation",
+      "Transferring model ownership between users",
+      "Converting models between different programming languages"
+    ],
+    "explanation": "Transfer learning in Azure Custom Vision (and machine learning generally) refers to applying knowledge gained from solving one problem to a different but related situation. This technique allows the system to leverage pre-trained neural networks and adapt them to new classification tasks with relatively few labeled examples, substantially decreasing the time needed for creating effective models.",
+    "correctAnswer": 1
+  },
+  {
+    question: "Which of the following best explains why clock synchronization is important in IoT systems?",
+    options: [
+      "To improve the battery life of devices",
+      "To prevent packet loss during communication",
+      "To ensure chronological ordering and coordination of distributed events",
+      "To reduce the memory usage of IoT devices"
+    ],
+    explanation: "Clock synchronization in IoT is crucial for ensuring that sensor events across distributed devices can be chronologically ordered. It also helps in coordinating asynchronous processes and actions, such as actuator commands.",
+    correctAnswer: 2
+  }
+,
+{
+  question: "What does clock drift refer to in the context of IoT systems?",
+  options: [
+    "The change in signal strength over time",
+    "The difference in the speed at which two clocks tick",
+    "A sudden failure in the clock hardware",
+    "A delay in sensor event transmission"
+  ],
+  explanation: "Clock drift is the difference in the frequency of clocks — i.e., how fast or slow they run relative to each other, which causes increasing time differences over time.",
+  correctAnswer: 1
+}
+,
+{
+  question: "Which of the following best describes clock skew?",
+  options: [
+    "The incorrect setting of a clock at initialization",
+    "The time difference between two clocks at a given instant",
+    "A device’s inability to synchronize with the cloud",
+    "The inability of two sensors to detect the same event"
+  ],
+  explanation: "Clock skew refers to the relative time difference between two clocks at a particular moment.",
+  correctAnswer: 1
+}
+,{
+  question: "What distinguishes external clock synchronization from internal synchronization in IoT?",
+  options: [
+    "External uses machine learning while internal does not",
+    "External ensures clocks match a global reference, internal focuses on synchronization between devices",
+    "Internal works with cloud clocks only, external with edge clocks only",
+    "Internal uses atomic clocks, external does not"
+  ],
+  explanation: "External synchronization ensures clocks align with a global standard like UTC, while internal synchronization keeps clocks in agreement with each other, regardless of external time.",
+  correctAnswer: 1
+}
+,
+{
+  question: "In Christian’s algorithm for clock synchronization, what is used to estimate the current time at the client?",
+  options: [
+    "The server’s time minus the round trip delay",
+    "The midpoint between sending and receiving a reply",
+    "The client’s time incremented by one second",
+    "A hash of the server’s clock value"
+  ],
+  explanation: "Christian’s algorithm sets the client clock to the midpoint of the round-trip interval, assuming symmetric delays.",
+  correctAnswer: 1
+}
+,
+{
+  question: "In Network Time Protocol (NTP), the offset between client and server clocks is calculated as:",
+  options: [
+    "(T1 - T2 + T3 - T4) / 2",
+    "(T2 - T1 + T4 - T3) / 2",
+    "(T1 + T2 + T3 + T4) / 4",
+    "(T2 - T4 + T3 - T1) / 2"
+  ],
+  explanation: "In NTP, the offset is calculated as: (tr1 - tr2 + ts2 - ts1)/2, which is (receive1 - receive2 + send2 - send1)/2.",
+  correctAnswer: 1
+}
+, 
+{
+  question: "What is the primary purpose of Lamport timestamps in distributed IoT systems?",
+  options: [
+    "To assign physical time to events",
+    "To ensure global time accuracy across all devices",
+    "To maintain causal ordering between events",
+    "To synchronize hardware-level clocks"
+  ],
+  explanation: "Lamport timestamps ensure causality by assigning logical clocks to events, not physical time.",
+  correctAnswer: 2
+}
+,
+{
+  question: "Which of the following is true about vector clocks?",
+  options: [
+    "They use a single counter for each event",
+    "They are only used for error correction",
+    "They assign a vector of counters for each process to track causality",
+    "They rely on GPS signals for accuracy"
+  ],
+  explanation: "Vector clocks use a vector of integers, one per process, to track causal relationships between distributed events.",
+  correctAnswer: 2
+}
+,
+{
+  question: "Which of the following best describes Berkeley’s algorithm for time synchronization?",
+  options: [
+    "It uses GPS to align all device clocks",
+    "A master polls devices and sets their time based on average clock values",
+    "Each device adjusts its clock based on NTP messages",
+    "It adjusts device clocks based on temperature sensors"
+  ],
+  explanation: "Berkeley’s algorithm involves a master collecting times from devices, averaging them, and then sending adjustment instructions to synchronize all clocks.",
+  correctAnswer: 1
+}
+,
+{
+  question: "How can IoT systems avoid physical clock synchronization while still maintaining event ordering?",
+  options: [
+    "By using higher bandwidth connections",
+    "By logging all events in a local database",
+    "By assigning logical timestamps like Lamport or vector timestamps",
+    "By limiting the number of devices in the network"
+  ],
+  explanation: "Logical timestamps like Lamport or vector clocks can preserve causal event ordering without requiring synchronized physical clocks.",
+  correctAnswer: 2
+}
+,
+
+  {
+    question: "What is the role of the Kubernetes API Server?",
+    options: [
+      "Scheduling pods to worker nodes",
+      "Managing container images",
+      "Providing a RESTful interface and cluster state access",
+      "Monitoring containers for health"
+    ],
+    explanation: "The API Server acts as the gateway to the Kubernetes cluster. It is the only component that communicates directly with etcd and provides a RESTful interface to interact with the cluster state.",
+    correctAnswer: 2
+  },
+  {
+    question: "Which component is responsible for assigning pods to nodes in Kubernetes?",
+    options: [
+      "Kubelet",
+      "Scheduler",
+      "Controller Manager",
+      "Kube-proxy"
+    ],
+    explanation: "The Scheduler watches for newly created pods without assigned nodes and selects a suitable node based on available resources and other constraints.",
+    correctAnswer: 1
+  },
+  {
+    question: "Which of the following is NOT a responsibility of kubelet?",
+    options: [
+      "Registering the node with the API server",
+      "Running the pod’s containers",
+      "Assigning pods to nodes",
+      "Monitoring container status and health"
+    ],
+    explanation: "Kubelet does many things on the node, but assigning pods to nodes is done by the Kubernetes Scheduler, not the kubelet.",
+    correctAnswer: 2
+  },
+  {
+    question: "What is the purpose of the etcd component in Kubernetes?",
+    options: [
+      "Running container workloads",
+      "Storing all cluster data in a key-value format",
+      "Routing network traffic",
+      "Balancing load between services"
+    ],
+    explanation: "Etcd is a distributed key-value store used by Kubernetes to persist all cluster state, including pods, nodes, and configurations.",
+    correctAnswer: 1
+  },
+  {
+    question: "Which Docker component is responsible for executing commands like `docker run`?",
+    options: [
+      "Docker Daemon",
+      "Docker Hub",
+      "Docker Client",
+      "Docker Compose"
+    ],
+    explanation: "The Docker Client issues commands like `docker run`, which are then sent to the Docker Daemon via REST API for execution.",
+    correctAnswer: 2
+  },
+  {
+    question: "What is the main function of kube-proxy in a Kubernetes cluster?",
+    options: [
+      "Assign pods to nodes",
+      "Manage persistent volumes",
+      "Maintain network rules and handle service networking",
+      "Monitor container health"
+    ],
+    explanation: "Kube-proxy maintains network rules on nodes, allowing communication between pods and handling load balancing for services.",
+    correctAnswer: 2
+  },
+  {
+    question: "In Kubernetes, which component is responsible for implementing control loops to maintain the cluster's desired state?",
+    options: [
+      "Scheduler",
+      "Kubelet",
+      "Controller Manager",
+      "Kube-proxy"
+    ],
+    explanation: "The Controller Manager runs various controllers that monitor the state of cluster resources and take corrective action to match the desired state.",
+    correctAnswer: 2
+  },
+  {
+    question: "Which of the following statements about Docker containers is TRUE?",
+    options: [
+      "Each container runs a full operating system kernel",
+      "Containers are more heavyweight than virtual machines",
+      "Containers share the host OS kernel but are isolated",
+      "Containers cannot be run outside Kubernetes"
+    ],
+    explanation: "Containers are lightweight and share the host's OS kernel, unlike VMs. They provide isolated environments but are not full OS instances.",
+    correctAnswer: 2
+  },
+  {
+    question: "What does the container runtime do on a Kubernetes node?",
+    options: [
+      "Schedules the pod to a node",
+      "Fetches container images and runs containers",
+      "Manages user access policies",
+      "Creates services for exposing containers"
+    ],
+    explanation: "The container runtime is responsible for pulling container images, preparing the environment, and running containers.",
+    correctAnswer: 1
+  },
+  {
+    question: "What is the use of a Docker registry like Docker Hub?",
+    options: [
+      "Runs containers",
+      "Manages Docker networks",
+      "Stores and distributes container images",
+      "Builds Docker images"
+    ],
+    explanation: "Docker Hub is a registry service where container images are stored and from where they can be pulled for deployment.",
+    correctAnswer: 2
+  }
+
+
+
+      ]
+    
   };
+
   
   // For the "all" mode, combine questions from all weeks
   if (mode === 'all') {

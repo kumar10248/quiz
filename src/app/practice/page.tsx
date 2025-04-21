@@ -72,7 +72,7 @@ export default function PracticeSelectionPage() {
                     <FaClipboardCheck className="text-4xl text-purple-400" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-lg mb-2">Assignment Review</h3>
+                    <h3 className="font-semibold text-lg mb-2">Miscellenous Questions</h3>
                     <p className="text-sm opacity-80">
                       Practice questions related to course assignments and projects.
                     </p>
