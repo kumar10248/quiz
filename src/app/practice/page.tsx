@@ -103,7 +103,7 @@ export default function PracticeSelectionPage() {
             </div>
           </div>
 
-          <div className="flex justify-between">
+          <div className="flex justify-between mb-10">
             <Link href="/" className="px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-md">
               Back to Home
             </Link>
