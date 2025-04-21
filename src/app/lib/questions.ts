@@ -1371,29 +1371,73 @@ export function getAllQuestions(mode: PracticeMode): Question[] {
 
   
   // For the "all" mode, combine questions from all weeks
+  const shuffleArray = <T>(array: T[]): T[] => {
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+  };
+  
+  // Function to shuffle options while preserving correct answer
+  const shuffleOptions = (question: Question): Question => {
+    const originalCorrectOption = question.options[question.correctAnswer];
+    
+    // Create a new question with shuffled options
+    const shuffledOptions = shuffleArray([...question.options]);
+    
+    // Find the new index of the correct answer
+    const newCorrectAnswerIndex = shuffledOptions.findIndex(
+      option => option === originalCorrectOption
+    );
+    
+    return {
+      ...question,
+      options: shuffledOptions,
+      correctAnswer: newCorrectAnswerIndex
+    };
+  };
+  
+  // For the "ultimate" challenge mode, combine and randomize questions from all weeks
+  if (mode === 'assignment') {
+    let allQuestions: Question[] = [];
+    // Gather questions from all weeks (excluding assignment)
+    for (const week in weekQuestions) {
+      if (week !== 'assignment') {
+        allQuestions = [...allQuestions, ...weekQuestions[week]];
+      }
+    }
+    // Shuffle all questions and their options
+    return shuffleArray(allQuestions).map(q => shuffleOptions(q));
+  }
+  
+  // For the "all" mode, combine questions from all weeks
   if (mode === 'all') {
     let allQuestions: Question[] = [];
     for (const week in weekQuestions) {
       allQuestions = [...allQuestions, ...weekQuestions[week]];
     }
-    return allQuestions;
+    // Shuffle all questions and their options
+    return shuffleArray(allQuestions).map(q => shuffleOptions(q));
   }
   
   // Handle specific week or assignment mode
   if (weekQuestions[mode] && weekQuestions[mode].length > 0) {
-    return weekQuestions[mode];
+    // Return shuffled questions with shuffled options for the specific mode
+    return shuffleArray(weekQuestions[mode]).map(q => shuffleOptions(q));
   }
   
   // Fallback - if mode doesn't exist or has no questions
   console.error(`No questions found for mode: ${mode}`);
   
   // Return default questions instead of empty array
-  return weekQuestions.week1 || [
+  return shuffleArray(weekQuestions.week1 || [
     {
       question: "Default question when no questions are found",
       options: ["Option A", "Option B", "Option C", "Option D"],
       correctAnswer: 0,
       explanation: "This is a placeholder question since no questions were found for the selected mode."
     }
-  ];
+  ]).map(q => shuffleOptions(q));
 }
