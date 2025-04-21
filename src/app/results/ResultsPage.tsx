@@ -8,6 +8,8 @@ import { useState, useEffect } from 'react';
 import { FaArrowLeft, FaHome, FaRedo, FaTrophy, FaClock, FaShare, FaTwitter, FaFacebook } from 'react-icons/fa';
 import { formatTime } from '@/app/lib/utils';
 
+type SharePlatform = 'twitter' | 'whatsapp' | 'linkedin' | 'facebook' | 'copy';
+
 export default function ResultsPage() {
   const searchParams = useSearchParams();
 
@@ -67,21 +69,19 @@ export default function ResultsPage() {
   const totalTimeAllotted = total * 120;
   const timeUsed = totalTimeAllotted - timeRemaining;
 
-  const handleShare = (platform:any) => {
+  const handleShare = (platform: SharePlatform) => {
     const shareText = `I scored ${score}/${total} (${percentage}%) on ${mode} practice! ${getEmojiForScore()}`;
     const shareUrl = window.location.href;
     
     if (platform === 'twitter') {
       window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`, '_blank');
     } 
-
     else if (platform === 'whatsapp') {
       window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(shareText)} ${encodeURIComponent(shareUrl)}`, '_blank');
     }
     else if (platform === 'linkedin') {
       window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`, '_blank');
     }
-    
     else if (platform === 'facebook') {
       window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}&quote=${encodeURIComponent(shareText)}`, '_blank');
     } else if (platform === 'copy') {

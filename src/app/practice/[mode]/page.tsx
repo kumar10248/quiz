@@ -265,7 +265,6 @@ export default function QuestionPracticePage() {
               let bgColor = "bg-gray-800 hover:bg-gray-700";
               let textColor = "text-gray-300";
               let borderStyle = "";
-              let statusIndicator = "";
               
               // Current question
               if (index === currentQuestionIndex) {
@@ -356,7 +355,7 @@ export default function QuestionPracticePage() {
               <div className="space-y-4">
                 {currentQuestion?.options?.map((option, index) => {
                   // Define the styling based on the state
-                  let baseStyle = "w-full text-left p-5 rounded-lg transition-all duration-300 flex items-start border border-transparent";
+                  const baseStyle = "w-full text-left p-5 rounded-lg transition-all duration-300 flex items-start border border-transparent";
                   let dynamicStyle = "bg-gray-800 hover:bg-gray-700 hover:border-gray-600";
                   
                   // For answered state
