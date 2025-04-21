@@ -17,6 +17,12 @@ export default function Home() {
             className="inline-block bg-amber-500 hover:bg-amber-600 text-black font-bold py-3 px-8 rounded-lg transition duration-300 text-lg">
             Start Practicing
           </Link>
+          <div>
+            <a href="/W7_merged.pdf" download= "complete_IOT-Notes.pdf"
+            className='inline-block bg-green-500 hover:bg-green-600 text-black font-bold py-3 px-8 rounded-lg transition duration-300 text-lg mt-4'
+            >
+              Download Notes</a>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-20">
             <div className="bg-gray-900 p-6 rounded-lg border border-amber-400">
