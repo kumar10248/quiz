@@ -312,7 +312,7 @@ export default function QuestionPracticePage() {
       
       {/* Main content */}
       <div className="md:ml-72 transition-all duration-300">
-        <div className="container mx-auto px-4 py-8 mt-6">
+        <div className="container mx-auto px-4 py-8 mt-10">
           <div className="max-w-3xl mx-auto">
             {/* Timer and progress - Mobile view */}
             <div className="md:hidden flex justify-between items-center mb-6 bg-gray-800/50 p-3 rounded-lg backdrop-blur-sm">
