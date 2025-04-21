@@ -38,7 +38,7 @@ export default function Home() {
             Start Practicing
           </Link>
           <div>
-            <a href="/W7_merged.pdf" download="complete_IOT-Notes.pdf"
+            <a href="/complete_IOT-Notes.pdf" download="complete_IOT-Notes.pdf"
             className='inline-block bg-green-500 hover:bg-green-600 text-black font-bold py-3 px-8 rounded-lg transition duration-300 text-lg mt-4'
             >
               Download Notes</a>
