@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { FaArrowLeft, FaArrowRight, FaClock, FaTimes, FaBars, FaCheck, 
-  FaTrophy, FaExclamationCircle, FaCircle, FaLightbulb, FaRegCircle, 
+  FaTrophy, FaExclamationCircle, FaLightbulb, 
   FaChevronRight, FaBrain, FaCheckCircle, FaTimesCircle, FaHistory } from 'react-icons/fa';
 import { getAllQuestions } from '../../lib/questions';
 import { Question, PracticeMode } from '../../types';
