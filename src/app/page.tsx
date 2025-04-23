@@ -75,7 +75,7 @@ export default function Home() {
                 <FaClock className="text-amber-400 text-3xl" />
               </div>
               <h3 className="text-2xl font-semibold mb-3 text-amber-50">Timed Practice</h3>
-              <p className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300">2 minutes per question to challenge your knowledge and improve your exam speed</p>
+              <p className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300">1 minutes per question to challenge your knowledge and improve your exam speed</p>
             </div>
             
             <div className="bg-gradient-to-br from-gray-900 to-gray-800 p-8 rounded-xl border border-green-400/20 hover:border-green-400/50 transition-all duration-500 group backdrop-blur-sm hover:shadow-xl hover:shadow-green-500/10 transform hover:-translate-y-2">
