@@ -15,5 +15,5 @@ export function formatTime(seconds: number): string {
 
 // Calculate total session time - 2 minutes per question
 export function calculateSessionTime(questionCount: number): number {
-  return questionCount * 120; // 120 seconds (2 minutes) per question
+  return questionCount * 60; // 120 seconds (2 minutes) per question
 }
