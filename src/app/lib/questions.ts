@@ -1361,8 +1361,902 @@ export function getAllQuestions(mode: PracticeMode): Question[] {
     ],
     explanation: "Docker Hub is a registry service where container images are stored and from where they can be pulled for deployment.",
     correctAnswer: 2
+  },
+  
+    {
+      "question": "Which of the following is a primary benefit of using collaborative cloud-edge environments?",
+      "options": [
+        "Reduced hardware cost",
+        "Centralized resource control",
+        "Improved performance and efficiency through resource optimization",
+        "Complete reliance on cloud for processing"
+      ],
+      "explanation": "Collaborative cloud-edge environments optimize performance by balancing workloads between cloud and edge resources, leading to greater efficiency.",
+      "correctAnswer": 2
+    },
+    {
+      "question": "What does the tuple (s_t, a_t, P, r, γ) represent in a Markov Decision Process?",
+      "options": [
+        "Resource allocation framework",
+        "Edge-cloud interaction strategy",
+        "Set of demand-time slot pairs",
+        "States, actions, transition probability, reward, discount factor"
+      ],
+      "explanation": "This tuple defines the components of a Markov Decision Process used to model decision-making problems.",
+      "correctAnswer": 3
+    },
+    {
+      "question": "What is a key challenge in resource allocation in a multi-edge-node scenario?",
+      "options": [
+        "Lack of cloud services",
+        "Limited user devices",
+        "Coordinating between multiple edge and cloud nodes",
+        "Low storage capacity"
+      ],
+      "explanation": "In multi-edge-node environments, coordination between cloud and edge nodes becomes complex due to distributed resource management.",
+      "correctAnswer": 2
+    },
+    {
+      "question": "In the public cloud pricing model, which of the following is NOT one of the pricing instances?",
+      "options": [
+        "On-demand instance",
+        "Spot instance",
+        "Static instance",
+        "Reserved instance"
+      ],
+      "explanation": "Public cloud pricing models include on-demand, reserved, and spot instances. 'Static instance' is not a recognized type.",
+      "correctAnswer": 2
+    },
+    {
+      "question": "In the context of deep reinforcement learning, what is the role of the Actor in the DDPG algorithm?",
+      "options": [
+        "Calculates cost",
+        "Selects actions based on policy",
+        "Stores user demand",
+        "Estimates the value function"
+      ],
+      "explanation": "The Actor network in DDPG selects actions based on the policy it learns through interaction with the environment.",
+      "correctAnswer": 1
+    },
+    {
+      "question": "What is represented by D_t = (d_t, l_t)?",
+      "options": [
+        "Edge node’s bandwidth and latency",
+        "User demand: number of VMs and duration",
+        "Demand priority and network usage",
+        "Resource allocation cost"
+      ],
+      "explanation": "D_t represents the user's demand at time t, where d_t is the number of requested VMs and l_t is the duration.",
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which algorithm uses parameterized actions to decide on both cloud instance type and its usage ratio?",
+      "options": [
+        "CERAI",
+        "MDP",
+        "PAMDP",
+        "P-DQN"
+      ],
+      "explanation": "PAMDP (Parameterized Action MDP) is designed for problems with discrete and continuous decision parameters, like cloud instance selection and ratio.",
+      "correctAnswer": 2
+    },
+    {
+      "question": "What is the main objective of resource allocation in cloud-edge systems using deep reinforcement learning?",
+      "options": [
+        "Maximize VM usage",
+        "Maximize cost",
+        "Minimize long-term cost",
+        "Increase computational delay"
+      ],
+      "explanation": "The primary goal is to minimize the long-term operational cost of resource allocation over multiple time slots.",
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which of the following is used to store and reuse experiences in DDPG and P-DQN algorithms?",
+      "options": [
+        "Allocation Record List",
+        "Experience Replay Pool",
+        "Resource State Pool",
+        "Instance Type Dictionary"
+      ],
+      "explanation": "Experience Replay Pool allows reinforcement learning models to reuse past experiences to stabilize and improve learning.",
+      "correctAnswer": 1
+    },
+    {
+      "question": "What is the function of the Critic network in the DDPG algorithm?",
+      "options": [
+        "Selects instance type",
+        "Generates policy actions",
+        "Evaluates the actions using a value function",
+        "Calculates network bandwidth"
+      ],
+      "explanation": "The Critic network evaluates the actions taken by the Actor using a value function to guide better future decisions.",
+      "correctAnswer": 2
+    }
+    ,
+    
+      {
+        "question": "Which of the following best describes vertical offloading in cloud-edge computing?",
+        "options": [
+          "Transferring tasks between edge nodes",
+          "Transferring tasks from cloud to edge or vice versa",
+          "Storing data across multiple devices",
+          "Synchronizing local and global clocks"
+        ],
+        "explanation": "Vertical offloading refers to transferring tasks or services from one hierarchical layer (e.g., edge) to another (e.g., cloud) to improve efficiency or reduce latency.",
+        "correctAnswer": 1
+      },
+      {
+        "question": "What is the role of the Edge Controller in Edge-Cloud systems?",
+        "options": [
+          "Storing IoT device data",
+          "Executing all computational tasks locally",
+          "Managing resources and scheduling task offloading",
+          "Securing communication protocols"
+        ],
+        "explanation": "The Edge Controller is responsible for managing system resources, scheduling offloading, and ensuring application performance in Edge-Cloud systems.",
+        "correctAnswer": 2
+      },
+      {
+        "question": "In latency models, what is the major benefit of offloading tasks to a local edge node?",
+        "options": [
+          "Unlimited computing resources",
+          "Ultra-low latency due to proximity",
+          "Redundant data storage",
+          "Reduced security overhead"
+        ],
+        "explanation": "Local edge nodes reduce end-to-end service time by minimizing network delays, thus providing ultra-low latency.",
+        "correctAnswer": 1
+      },
+      {
+        "question": "Which of these factors is NOT considered in the computation model of the terminal layer?",
+        "options": [
+          "Processing delay",
+          "Energy consumption",
+          "Bandwidth of IoT network",
+          "Waiting delay"
+        ],
+        "explanation": "The terminal layer computation model considers delay and energy, not explicitly network bandwidth.",
+        "correctAnswer": 2
+      },
+      {
+        "question": "What is the main goal of the Online Predictive Offloading (OPO) algorithm?",
+        "options": [
+          "Predict weather changes for cloud data centers",
+          "Minimize long-term cost including latency and energy consumption",
+          "Maximize the number of offloaded tasks",
+          "Ensure tasks are executed only in cloud"
+        ],
+        "explanation": "OPO uses LSTM and deep reinforcement learning to predict server load and optimize offloading decisions to minimize long-term costs.",
+        "correctAnswer": 1
+      },
+      {
+        "question": "Which part of the system records the characteristics of tasks and edge server loads to aid in offloading decisions?",
+        "options": [
+          "Edge Controller",
+          "LSTM Model",
+          "Monitoring Component",
+          "Infrastructure Manager"
+        ],
+        "explanation": "The LSTM model predicts task characteristics and server load to assist the decision model in offloading tasks efficiently.",
+        "correctAnswer": 1
+      },
+      {
+        "question": "In the Chandy-Lamport algorithm, what is the purpose of the marker message?",
+        "options": [
+          "To update task state",
+          "To separate pre- and post-snapshot messages",
+          "To trigger edge processing",
+          "To encrypt snapshots"
+        ],
+        "explanation": "Markers are control messages that help distinguish between messages to include in a distributed snapshot.",
+        "correctAnswer": 1
+      },
+      {
+        "question": "Which scenario describes horizontal offloading?",
+        "options": [
+          "Sending tasks from IoT to the cloud",
+          "Transferring tasks from an edge node to another edge node",
+          "Migrating data between cloud regions",
+          "Uploading results from edge to IoT"
+        ],
+        "explanation": "Horizontal offloading refers to workload distribution between service nodes within the same hierarchical tier, such as edge-to-edge.",
+        "correctAnswer": 1
+      },
+      {
+        "question": "Which Deep Q-Network (DQN) enhancement helps avoid overestimation during training?",
+        "options": [
+          "Experience Replay",
+          "Double DQN",
+          "Dueling DQN",
+          "Randomized Action Selection"
+        ],
+        "explanation": "Double DQN reduces overestimation by separating action selection and evaluation into two distinct networks.",
+        "correctAnswer": 1
+      },
+      {
+        "question": "What does the global snapshot algorithm ensure in a distributed system?",
+        "options": [
+          "Tasks are executed in parallel",
+          "Total cost is minimized",
+          "Consistent state recording across all nodes",
+          "Energy usage is balanced"
+        ],
+        "explanation": "Global snapshot algorithms like Chandy-Lamport ensure a consistent system-wide state view for monitoring or recovery.",
+        "correctAnswer": 2
+      }
+        
+,
+
+  {
+    "question": "What is the primary function of Spark Streaming in big data systems?",
+    "options": [
+      "Processing large volumes of static data",
+      "Real-time processing of live data streams",
+      "Archiving data for historical analysis",
+      "Generating encryption keys"
+    ],
+    "explanation": "Spark Streaming is used for real-time processing of live data streams and can integrate with Kafka, Flume, and TCP/IP sources.",
+    "correctAnswer": 1
+  },
+  {
+    "question": "Which architecture does Spark Streaming use for processing data?",
+    "options": [
+      "Event-driven architecture",
+      "Batch-processing only",
+      "Micro-batch processing architecture",
+      "Reactive programming model"
+    ],
+    "explanation": "Spark Streaming uses a micro-batch architecture where the live data stream is divided into small batches which are processed using Spark jobs.",
+    "correctAnswer": 2
+  },
+  {
+    "question": "Which of the following is a key feature of Kafka as a messaging system?",
+    "options": [
+      "Processes only batch data",
+      "Supports only point-to-point messaging",
+      "Highly fault-tolerant and scalable",
+      "Requires low disk space"
+    ],
+    "explanation": "Kafka is a distributed and fault-tolerant messaging system capable of handling millions of messages per second and is highly scalable.",
+    "correctAnswer": 2
+  },
+  {
+    "question": "Which communication pattern is followed by both Kafka and MQTT?",
+    "options": [
+      "Request/Response",
+      "Client-Server",
+      "Peer-to-Peer",
+      "Publish/Subscribe"
+    ],
+    "explanation": "Both Kafka and MQTT follow the Publish/Subscribe messaging model, where messages are sent to topics and subscribed to by consumers.",
+    "correctAnswer": 3
+  },
+  {
+    "question": "What is a DStream in Spark Streaming?",
+    "options": [
+      "A stream of SQL queries",
+      "A distributed stream of RDDs",
+      "A Kafka broker",
+      "A batch query executor"
+    ],
+    "explanation": "DStream (Discretized Stream) represents a continuous stream of data divided into RDDs and processed by Spark Streaming.",
+    "correctAnswer": 1
+  },
+  {
+    "question": "What benefit does integrating MQTT with Kafka provide in an IoT system?",
+    "options": [
+      "Eliminates the need for cloud storage",
+      "Reduces the size of IoT devices",
+      "Enables seamless integration between edge devices and backend analytics systems",
+      "Prevents message loss entirely"
+    ],
+    "explanation": "Integration allows IoT devices to use MQTT for lightweight messaging and Kafka for reliable, scalable backend analytics processing.",
+    "correctAnswer": 2
+  },
+  {
+    "question": "What type of analytics is enabled by Spark Streaming’s sliding window functions?",
+    "options": [
+      "Static analytics",
+      "Real-time rolling analytics",
+      "Historical archival",
+      "Predictive modeling only"
+    ],
+    "explanation": "Sliding window functions in Spark Streaming allow rolling computations like moving averages or hashtag counts over a specified time frame.",
+    "correctAnswer": 1
+  },
+  {
+    "question": "What makes an Edge Data Center distinct from a traditional cloud data center?",
+    "options": [
+      "Larger in size",
+      "Located closer to end-users for low-latency processing",
+      "Supports only batch processing",
+      "No integration with cloud"
+    ],
+    "explanation": "Edge data centers are small-scale data centers placed near end-users to reduce latency and bandwidth usage.",
+    "correctAnswer": 1
+  },
+  {
+    "question": "Which programming model is typically associated with modern cloud computing platforms like Spark?",
+    "options": [
+      "Object-oriented",
+      "Procedural",
+      "MapReduce and DataFrame-based",
+      "Functional only"
+    ],
+    "explanation": "Modern cloud platforms often use parallel programming models like MapReduce and DataFrame APIs for scalable computation.",
+    "correctAnswer": 2
+  },
+  {
+    "question": "What is a common use case of integrating Kafka with Spark Streaming?",
+    "options": [
+      "Encrypting database records",
+      "Storing data permanently in memory",
+      "Performing real-time analytics on streaming data",
+      "Sending emails based on user activity"
+    ],
+    "explanation": "Kafka can feed data into Spark Streaming for real-time processing tasks like fraud detection, sentiment analysis, or trend monitoring.",
+    "correctAnswer": 2
+  }
+,
+
+  {
+    "question": "What is the function of AWS Greengrass in an IoT Edge environment?",
+    "options": [
+      "Performs all computations in the cloud",
+      "Acts as a data storage system",
+      "Enables local compute, messaging, and ML inferencing on edge devices",
+      "Replaces all cloud components"
+    ],
+    "explanation": "AWS Greengrass extends AWS IoT to edge devices by allowing them to act locally on data, run ML inference, and sync with the cloud.",
+    "correctAnswer": 2
+  },
+  {
+    "question": "Which component of AWS IoT Core is responsible for authentication and message routing?",
+    "options": [
+      "Device Registry",
+      "Device Shadow",
+      "Rules Engine",
+      "Device Gateway"
+    ],
+    "explanation": "The Device Gateway handles secure communication and authentication, while the Rules Engine routes messages based on filters.",
+    "correctAnswer": 3
+  },
+  {
+    "question": "What is the primary benefit of using federated learning at the edge?",
+    "options": [
+      "Higher data transmission rates",
+      "Improved cloud computing speed",
+      "Data privacy by avoiding raw data transfer",
+      "Increased storage on devices"
+    ],
+    "explanation": "Federated Learning trains models on-device without transferring raw data, ensuring privacy and reducing communication overhead.",
+    "correctAnswer": 2
+  },
+  {
+    "question": "What does the FedAvg algorithm do in federated learning?",
+    "options": [
+      "Trains the main model in the cloud",
+      "Averages the parameters from local models on each client",
+      "Downloads data to each node",
+      "Encrypts model weights"
+    ],
+    "explanation": "FedAvg aggregates local model parameters from edge devices by averaging them to update the global model.",
+    "correctAnswer": 1
+  },
+  {
+    "question": "Which AWS service provides real-time data stream processing that integrates with IoT Core?",
+    "options": [
+      "AWS S3",
+      "Amazon SageMaker",
+      "Amazon Kinesis Data Analytics",
+      "AWS Lambda"
+    ],
+    "explanation": "Amazon Kinesis Data Analytics processes real-time data from IoT Core using tools like Apache Flink.",
+    "correctAnswer": 2
+  },
+  {
+    "question": "What is the role of the Device Shadow in AWS IoT Core?",
+    "options": [
+      "Stores firmware updates",
+      "Provides analytics on devices",
+      "Maintains digital twin of a device's state",
+      "Caches MQTT messages"
+    ],
+    "explanation": "Device Shadow maintains a virtual copy (digital twin) of the device's state and syncs changes between the cloud and device.",
+    "correctAnswer": 2
+  },
+  {
+    "question": "Why is edge computing crucial in autonomous vehicles?",
+    "options": [
+      "For higher fuel efficiency",
+      "To enable cloud-only AI processing",
+      "For real-time data processing and decision-making",
+      "To reduce vehicle manufacturing cost"
+    ],
+    "explanation": "Edge computing enables autonomous vehicles to process sensor data locally, which is critical for real-time safety decisions.",
+    "correctAnswer": 2
+  },
+  {
+    "question": "Which type of machine learning model is commonly used in self-driving cars for time-based predictions?",
+    "options": [
+      "K-Means",
+      "CNN",
+      "LSTM",
+      "Decision Tree"
+    ],
+    "explanation": "LSTM (Long Short-Term Memory) networks are used in self-driving cars for modeling temporal sequences like acceleration predictions.",
+    "correctAnswer": 2
+  },
+  {
+    "question": "What is a Greengrass Group in AWS IoT architecture?",
+    "options": [
+      "A set of connected cloud services",
+      "A collection of settings and components for an IoT deployment",
+      "A virtual data lake",
+      "An AWS security policy"
+    ],
+    "explanation": "A Greengrass Group defines the boundary for interaction among a Greengrass Core, IoT devices, and subscriptions.",
+    "correctAnswer": 1
+  },
+  {
+    "question": "What is the purpose of Connectors in AWS Greengrass?",
+    "options": [
+      "To store backup configurations",
+      "To create data lakes",
+      "To simplify integration with external services and APIs",
+      "To compress MQTT data"
+    ],
+    "explanation": "Connectors in AWS Greengrass simplify edge workflows by handling external APIs and credentials for third-party services.",
+    "correctAnswer": 2
+  }
+,
+
+  {
+    "question": "What is the function of the AWS IoT Device Shadow?",
+    "options": [
+      "Store firmware updates",
+      "Act as a local MQTT broker",
+      "Maintain desired and reported state of devices",
+      "Trigger CloudFormation stacks"
+    ],
+    "explanation": "The Device Shadow is the digital twin of a physical IoT device, used to maintain its desired and reported state.",
+    "correctAnswer": 2
+  },
+  {
+    "question": "Which AWS service is used for ML model training in the cloud?",
+    "options": [
+      "AWS IoT Core",
+      "Amazon SageMaker",
+      "Amazon Redshift",
+      "AWS Lambda"
+    ],
+    "explanation": "Amazon SageMaker is an end-to-end machine learning service used for model building, training, and deployment.",
+    "correctAnswer": 1
+  },
+  {
+    "question": "What is the role of AWS Lambda in Greengrass?",
+    "options": [
+      "Visualize data",
+      "Perform local computing at the edge",
+      "Manage cloud users",
+      "Send email alerts"
+    ],
+    "explanation": "AWS Lambda functions allow edge devices running Greengrass to process data and act locally without sending data to the cloud.",
+    "correctAnswer": 1
+  },
+  {
+    "question": "In an event-driven architecture, what typically triggers an AWS Lambda function?",
+    "options": [
+      "Database backup",
+      "New EC2 instance",
+      "Sensor data or message on an MQTT topic",
+      "S3 storage threshold"
+    ],
+    "explanation": "In IoT, sensor data or MQTT messages often act as triggers for Lambda functions to perform specific tasks.",
+    "correctAnswer": 2
+  },
+  {
+    "question": "Which component in Spark Streaming is used for continuous data processing?",
+    "options": [
+      "KafkaStream",
+      "DataFrame",
+      "DStream",
+      "RDD"
+    ],
+    "explanation": "DStream (Discretized Stream) is the basic abstraction in Spark Streaming, representing a continuous stream of data.",
+    "correctAnswer": 2
+  },
+  {
+    "question": "Which of the following best describes horizontal offloading?",
+    "options": [
+      "Transferring data from cloud to edge",
+      "Offloading tasks to a remote server",
+      "Task sharing between edge nodes",
+      "Sending data to a mobile app"
+    ],
+    "explanation": "Horizontal offloading involves redistributing tasks between edge nodes within the same layer.",
+    "correctAnswer": 2
+  },
+  {
+    "question": "What is the main advantage of micro-batch processing in Spark Streaming?",
+    "options": [
+      "Improved security",
+      "Faster computation on large datasets",
+      "Fault tolerance and scalability",
+      "Reduces memory requirements"
+    ],
+    "explanation": "Micro-batch processing in Spark Streaming provides fault tolerance and scalability while enabling near-real-time data processing.",
+    "correctAnswer": 2
+  },
+  {
+    "question": "Which AWS service helps visualize industrial sensor data at scale?",
+    "options": [
+      "AWS AppSync",
+      "AWS Greengrass",
+      "AWS SiteWise",
+      "AWS Kinesis"
+    ],
+    "explanation": "AWS SiteWise is used to collect, organize, and visualize industrial equipment data at scale.",
+    "correctAnswer": 2
+  },
+  {
+    "question": "Which of the following components allows Greengrass devices to send data back for retraining ML models?",
+    "options": [
+      "Device Shadow",
+      "Feedback Connector",
+      "Rules Engine",
+      "IoT Core Gateway"
+    ],
+    "explanation": "The Greengrass Feedback Connector sends inference results and field data back to AWS for model improvement.",
+    "correctAnswer": 1
+  },
+  {
+    "question": "Which communication model does MQTT follow?",
+    "options": [
+      "Peer-to-peer",
+      "Point-to-point",
+      "Client-server",
+      "Publish-subscribe"
+    ],
+    "explanation": "MQTT is based on the publish-subscribe model, which decouples message producers from consumers.",
+    "correctAnswer": 3
+  }
+,
+  {
+    "question": "What is the primary benefit of cloud computing?",
+    "options": [
+      "Increased hardware costs",
+      "Scalability and flexibility",
+      "Limited accessibility",
+      "Fixed resource allocation"
+    ],
+    "explanation": "Cloud computing allows dynamic scaling of resources based on demand, providing flexibility and cost-efficiency.",
+    "correctAnswer": 1
+  },
+  {
+    "question": "Which service model provides hardware resources over the internet?",
+    "options": [
+      "SaaS",
+      "PaaS",
+      "IaaS",
+      "DaaS"
+    ],
+    "explanation": "Infrastructure as a Service (IaaS) offers virtualized computing resources over the internet.",
+    "correctAnswer": 2
+  },
+  {
+    "question": "What does SaaS stand for?",
+    "options": [
+      "Software as a Service",
+      "Storage as a Service",
+      "Security as a Service",
+      "System as a Service"
+    ],
+    "explanation": "SaaS delivers software applications over the internet, eliminating the need for local installation.",
+    "correctAnswer": 0
+  },
+  {
+    "question": "Which cloud deployment model offers services to multiple organizations?",
+    "options": [
+      "Private Cloud",
+      "Public Cloud",
+      "Hybrid Cloud",
+      "Community Cloud"
+    ],
+    "explanation": "Public clouds provide services to multiple clients over the internet.",
+    "correctAnswer": 1
+  },
+  {
+    "question": "Which of the following is a common example of PaaS?",
+    "options": [
+      "Amazon EC2",
+      "Google App Engine",
+      "Microsoft Office 365",
+      "Dropbox"
+    ],
+    "explanation": "Google App Engine is a popular Platform as a Service (PaaS) offering.",
+    "correctAnswer": 1
+  },
+  {
+    "question": "What layer of AWS IoT architecture manages secure communication and device registration?",
+    "options": [
+      "Greengrass",
+      "IoT Core",
+      "Device Shadow",
+      "FreeRTOS"
+    ],
+    "explanation": "AWS IoT Core manages device registration and secure communications between cloud and devices.",
+    "correctAnswer": 1
+  },
+  {
+    "question": "Which feature of AWS Greengrass allows devices to act on data locally?",
+    "options": [
+      "IoT Core",
+      "Greengrass Lambda",
+      "CloudWatch",
+      "FreeRTOS"
+    ],
+    "explanation": "Greengrass Lambda allows edge devices to run code locally in response to events.",
+    "correctAnswer": 1
+  },
+  {
+    "question": "Which protocol is predominantly used by AWS IoT for device communication?",
+    "options": [
+      "HTTP",
+      "FTP",
+      "MQTT",
+      "SMTP"
+    ],
+    "explanation": "MQTT is a lightweight publish/subscribe messaging protocol used widely in IoT applications.",
+    "correctAnswer": 2
+  },
+  {
+    "question": "What is the purpose of Federated Learning?",
+    "options": [
+      "Centralize all data to one server",
+      "Train ML models with distributed data without transferring data",
+      "Encrypt communication between devices",
+      "Sync all data with AWS S3"
+    ],
+    "explanation": "Federated Learning enables distributed training of ML models across devices without sharing raw data.",
+    "correctAnswer": 1
+  },
+  {
+    "question": "Which algorithm is commonly used to average model weights in Federated Learning?",
+    "options": [
+      "Stochastic Gradient Descent",
+      "Backpropagation",
+      "FedAvg",
+      "AdaBoost"
+    ],
+    "explanation": "FedAvg is used to aggregate model weights from multiple clients in Federated Learning.",
+    "correctAnswer": 2
   }
 
+,
+
+  {
+    "question": "What is the purpose of AWS Greengrass Subscriptions?",
+    "options": [
+      "Update device firmware",
+      "Allow Lambda to invoke cloud services",
+      "Define communication paths between components",
+      "Manage billing information"
+    ],
+    "explanation": "Subscriptions define which components (devices, Lambda, cloud) can communicate with each other via topics.",
+    "correctAnswer": 2
+  },
+  {
+    "question": "Which AWS IoT Core feature allows SQL-based filtering of messages?",
+    "options": [
+      "Device Gateway",
+      "Message Broker",
+      "Rules Engine",
+      "Device Shadow"
+    ],
+    "explanation": "The Rules Engine in AWS IoT Core uses SQL-like syntax to filter and route messages to services like Lambda or DynamoDB.",
+    "correctAnswer": 2
+  },
+  {
+    "question": "Which of the following is NOT a valid use case of Federated Learning?",
+    "options": [
+      "Medical data training",
+      "Mobile keyboard personalization",
+      "Centralized weather prediction",
+      "Voice assistant personalization"
+    ],
+    "explanation": "Federated Learning is used where data privacy is crucial. Centralized weather prediction does not require data privacy.",
+    "correctAnswer": 2
+  },
+  {
+    "question": "What is a key advantage of using AWS IoT Device Defender?",
+    "options": [
+      "Predict user behavior",
+      "Monitor and audit device configurations for security",
+      "Create digital twins",
+      "Stream video data"
+    ],
+    "explanation": "AWS IoT Device Defender continuously audits security policies and device behavior for anomalies.",
+    "correctAnswer": 1
+  },
+  {
+    "question": "What is the key role of Amazon Kinesis in IoT architecture?",
+    "options": [
+      "Streaming data ingestion and real-time analytics",
+      "Device registration",
+      "Rule management",
+      "Machine learning training"
+    ],
+    "explanation": "Amazon Kinesis is used to ingest, process, and analyze streaming data from IoT sources in real time.",
+    "correctAnswer": 0
+  },
+  {
+    "question": "Which of the following AWS tools enables visual BI dashboards for IoT data?",
+    "options": [
+      "Amazon Kinesis",
+      "AWS Lambda",
+      "Amazon QuickSight",
+      "AWS Glue"
+    ],
+    "explanation": "Amazon QuickSight provides interactive dashboards and visualizations for insights derived from IoT data.",
+    "correctAnswer": 2
+  },
+  {
+    "question": "Which component ensures consistency of the IoT device’s reported and desired states?",
+    "options": [
+      "Rules Engine",
+      "Device Registry",
+      "Device Shadow",
+      "Thing Group"
+    ],
+    "explanation": "The Device Shadow keeps track of the desired and reported states of devices and synchronizes them accordingly.",
+    "correctAnswer": 2
+  },
+  {
+    "question": "What is the main challenge of non-IID data in Federated Learning?",
+    "options": [
+      "Leads to identical models",
+      "Easy to generalize across devices",
+      "Causes divergence in model updates (client drift)",
+      "Improves convergence speed"
+    ],
+    "explanation": "Non-IID data leads to inconsistent training across clients, making it hard to train a generalizable model and causing client drift.",
+    "correctAnswer": 2
+  },
+  {
+    "question": "What is the function of Amazon SageMaker Neo?",
+    "options": [
+      "Visualizes IoT data in dashboards",
+      "Compiles ML models for edge devices",
+      "Manages device connections",
+      "Builds DStreams in Spark"
+    ],
+    "explanation": "SageMaker Neo compiles ML models to run efficiently on edge devices by optimizing for specific hardware.",
+    "correctAnswer": 1
+  },
+  {
+    "question": "Which AWS service allows defining declarative workflows in Greengrass without writing code?",
+    "options": [
+      "Lambda",
+      "Greengrass Connector",
+      "IoT Core",
+      "Device Defender"
+    ],
+    "explanation": "Greengrass Connectors allow developers to define integrations using declarative configuration without writing custom code.",
+    "correctAnswer": 1
+  }
+,
+  {
+    "question": "Which AWS IoT component is responsible for filtering and routing messages?",
+    "options": [
+      "Device Shadow",
+      "Rules Engine",
+      "Device Registry",
+      "Lambda Connector"
+    ],
+    "explanation": "The Rules Engine evaluates incoming messages using SQL-like queries and routes them to AWS services or custom logic.",
+    "correctAnswer": 1
+  },
+  {
+    "question": "In federated learning, what is sent from the client to the central server?",
+    "options": [
+      "Raw data",
+      "Trained model parameters",
+      "Data logs",
+      "Feature importance graphs"
+    ],
+    "explanation": "Only trained model parameters are sent to preserve data privacy and reduce bandwidth usage.",
+    "correctAnswer": 1
+  },
+  {
+    "question": "What is the primary function of the Kalman Filter in autonomous vehicles?",
+    "options": [
+      "Identify road signs",
+      "Predict sensor fusion outcomes",
+      "Filter and estimate sensor readings for accuracy",
+      "Control braking systems"
+    ],
+    "explanation": "Kalman Filter is used to fuse sensor data and estimate more reliable values in noisy environments.",
+    "correctAnswer": 2
+  },
+  {
+    "question": "Which deep learning model is suitable for time-series data in autonomous vehicles?",
+    "options": [
+      "CNN",
+      "KNN",
+      "LSTM",
+      "SVM"
+    ],
+    "explanation": "LSTMs (Long Short-Term Memory networks) are ideal for sequential data like trajectories or vehicle movements.",
+    "correctAnswer": 2
+  },
+  {
+    "question": "What is the benefit of using edge computing in autonomous vehicles?",
+    "options": [
+      "Increased manufacturing cost",
+      "Slower decision-making",
+      "Real-time data processing and decision-making",
+      "Less storage usage"
+    ],
+    "explanation": "Edge computing reduces latency, enabling autonomous vehicles to make real-time decisions without needing cloud connectivity.",
+    "correctAnswer": 2
+  },
+  {
+    "question": "In Federated Learning, what is the common cause of client drift?",
+    "options": [
+      "Identical data distribution",
+      "Excessive bandwidth",
+      "Non-IID data across devices",
+      "Overfitting"
+    ],
+    "explanation": "Non-IID (non-independent and identically distributed) data can lead to inconsistent local models, causing client drift.",
+    "correctAnswer": 2
+  },
+  {
+    "question": "Which AWS service is used to train deep learning models before deployment to Greengrass?",
+    "options": [
+      "Amazon Redshift",
+      "Amazon EC2",
+      "Amazon SageMaker",
+      "Amazon DynamoDB"
+    ],
+    "explanation": "Amazon SageMaker is used for training machine learning models, which can then be deployed to edge devices via Greengrass.",
+    "correctAnswer": 2
+  },
+  {
+    "question": "How does AWS IoT ensure device-level identity and authentication?",
+    "options": [
+      "MAC address validation",
+      "Custom HTTP headers",
+      "X.509 certificates",
+      "OAuth tokens"
+    ],
+    "explanation": "AWS IoT uses X.509 certificates to securely authenticate devices.",
+    "correctAnswer": 2
+  },
+  {
+    "question": "Which AWS component stores metadata and configuration for connected IoT devices?",
+    "options": [
+      "Rules Engine",
+      "Device Shadow",
+      "Device Registry",
+      "IoT Gateway"
+    ],
+    "explanation": "The Device Registry maintains metadata and identities for IoT devices registered in AWS.",
+    "correctAnswer": 2
+  },
+  {
+    "question": "Which of the following best describes the 'learn-decide-act' cycle in edge ML?",
+    "options": [
+      "Train ML models on the cloud, infer on the edge, act on the device",
+      "Train on device, act in cloud, decide at edge",
+      "All processing is done in cloud",
+      "Only inference is done in cloud"
+    ],
+    "explanation": "Models are trained in the cloud, deployed to edge for inference, and the final action is taken by the device.",
+    "correctAnswer": 0
+  }
 
 
       ]
