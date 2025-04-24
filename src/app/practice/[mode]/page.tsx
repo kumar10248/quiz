@@ -459,9 +459,10 @@ export default function QuestionPracticePage() {
             {/* Question card */}
             <div className="bg-gradient-to-br from-gray-900/90 to-gray-800/90 rounded-xl p-8 mb-8 border border-gray-700/50 shadow-xl backdrop-blur-md">
               <h2 className="text-xl md:text-2xl mb-10 font-medium leading-relaxed">
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-amber-200 to-amber-400">
-                  {currentQuestion?.question || "Question not available"}
-                </span>
+              <pre className="bg-clip-text text-transparent bg-gradient-to-r from-amber-200 to-amber-400 whitespace-pre-wrap">
+  {currentQuestion?.question || "Question not available"}
+</pre>
+
               </h2>
               
               <div className="space-y-4">
