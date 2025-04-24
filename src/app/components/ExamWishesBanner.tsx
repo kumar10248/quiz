@@ -1,5 +1,3 @@
-/* eslint-disable rule-name */
-
 "use client";
 import React, { useState, useEffect } from 'react';
 import { FaGraduationCap, FaStar } from 'react-icons/fa';
@@ -82,7 +80,7 @@ export const ExamWishesBanner: React.FC = () => {
         
         <div className="text-center mb-6">
           <p className="text-gray-300 md:text-lg max-w-2xl mx-auto">
-            You've put in the hard work, and now it's time to shine. 
+            You&apos;ve put in the hard work, and now it&apos;s time to shine. 
             Remember to stay calm, manage your time wisely, and trust in your preparation.
           </p>
         </div>
