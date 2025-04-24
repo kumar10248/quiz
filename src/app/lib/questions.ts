@@ -580,16 +580,16 @@ export function getAllQuestions(mode: PracticeMode): Question[] {
           "correctAnswer": 1
         },
         {
-          "question": "Match the following properties with appropriate statements: Properties: X: Consistency, Y: Partition-tolerance, Z: Availability",
-          "options": [
-            "X-1, Y-2, Z-3",
-            "X-3, Y-2, Z-1",
-            "X-1, Y-3, Z-2",
-            "X-3, Y-1, Z-2"
-          ],
-          "explanation": "Consistency (X) ensures all nodes see the same data (1), Partition-tolerance (Y) ensures the system works despite network partitions (3), and Availability (Z) ensures operations return quickly (2).",
-          "correctAnswer": 2
-        },
+       "question": "Match the following properties with appropriate statements: Properties: X: Consistency, Y: Partition-tolerance, Z: Availability \nStatements:\n1: All nodes see the same data at any time, or reads return the latest written value by any client\n2: The system allows operations all the time, and operations return quickly\n3: The system continues to work in spite of network partitions",
+        "options": [
+          "X-1, Y-2, Z-3",
+          "X-3, Y-2, Z-1",
+          "X-1, Y-3, Z-2",
+          "X-3, Y-1, Z-2"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Consistency (X) ensures all nodes see the same data (1), Partition-tolerance (Y) ensures the system works despite network partitions (3), and Availability (Z) ensures operations return quickly (2)."
+      },
         {
           "question": "Which of the following conditions must be satisfied for a global state to be consistent?",
           "options": [
