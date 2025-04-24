@@ -645,13 +645,11 @@ export function getAllQuestions(mode: PracticeMode): Question[] {
         Z: Availability
         
         Statements:  
-        1: All nodes see the same data at any 
-           time, or reads return the latest
-            written value by any client  
-        2: The system allows operations all the 
-           time, and operations return quickly  
-        3: The system continues to work in spite 
-           of network partitions`,
+        1: All nodes see the same data at any time, or reads return the latest written value by any client  
+
+        2: The system allows operations all the time, and operations return quickly  
+        
+        3: The system continues to work in spite of network partitions`,
 
         options: [
           "X-1, Y-2, Z-3",
