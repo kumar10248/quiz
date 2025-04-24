@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import { FaGraduationCap, FaStar } from 'react-icons/fa';
+import { FaGraduationCap, FaStar, FaLightbulb, FaClock, FaBookOpen, FaBrain, FaCheckCircle, FaAngleDown, FaAngleUp } from 'react-icons/fa';
 
 interface ConfettiProps {
   left: string;
@@ -12,8 +12,16 @@ interface ConfettiProps {
   animationDuration: string;
 }
 
+interface TipProps {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+  color: string;
+}
+
 export const ExamWishesBanner: React.FC = () => {
   const [showConfetti, setShowConfetti] = useState<boolean>(false);
+  const [showTips, setShowTips] = useState<boolean>(false);
   
   useEffect(() => {
     // Initialize confetti effect
@@ -38,6 +46,45 @@ export const ExamWishesBanner: React.FC = () => {
   };
 
   const confettiElements = showConfetti ? generateConfetti() : [];
+
+  const examTips: TipProps[] = [
+    {
+      icon: <FaClock className="text-blue-400 text-xl" />,
+      title: "Time Management",
+      description: "Allocate 1-2 minutes per question. Skip difficult ones and return later. Save the last 5 minutes for review.",
+      color: "bg-blue-400/10"
+    },
+    {
+      icon: <FaBookOpen className="text-green-400 text-xl" />,
+      title: "Read Instructions Carefully",
+      description: "Understand each question fully before answering. Pay attention to negative questions or specific constraints.",
+      color: "bg-green-400/10"
+    },
+    {
+      icon: <FaBrain className="text-purple-400 text-xl" />,
+      title: "Process of Elimination",
+      description: "When unsure, eliminate obviously wrong answers first to improve your chances of selecting correctly.",
+      color: "bg-purple-400/10"
+    },
+    {
+      icon: <FaLightbulb className="text-amber-400 text-xl" />,
+      title: "Key NPTEL Patterns",
+      description: "Look for familiar concepts from video lectures. Many questions follow patterns from weekly assignments.",
+      color: "bg-amber-400/10"
+    },
+    {
+      icon: <FaCheckCircle className="text-red-400 text-xl" />,
+      title: "Double-Check Submissions",
+      description: "Verify all answers are marked before final submission. Ensure you've attempted maximum questions.",
+      color: "bg-red-400/10"
+    },
+    {
+      icon: <FaStar className="text-yellow-400 text-xl" />,
+      title: "Special Tips",
+      description: "Tick that option that is big in length. It is often the correct answer. It is a common pattern in NPTEL Question that I have observed it.",
+      color: "bg-yellow-400/10"
+    }
+  ];
 
   return (
     <div className="relative w-full py-8 px-4 mb-12 overflow-hidden">
@@ -100,6 +147,52 @@ export const ExamWishesBanner: React.FC = () => {
           </div>
         </div>
         
+        {/* Exam Tips Section */}
+        <div className="mt-6">
+          <button 
+            onClick={() => setShowTips(!showTips)} 
+            className="mx-auto flex items-center justify-center gap-2 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-black font-medium py-2 px-6 rounded-full transition duration-300 shadow-md"
+          >
+            <FaLightbulb /> 
+            <span>NPTEL Exam Tips</span>
+            {showTips ? <FaAngleUp /> : <FaAngleDown />}
+          </button>
+          
+          {showTips && (
+            <div className="mt-6 bg-gray-800/50 rounded-lg p-4 border border-gray-700 animate-fadeIn">
+              <h3 className="text-center text-xl font-semibold text-amber-300 mb-4">
+                Pro Tips for NPTEL Success
+              </h3>
+              
+              <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+                {examTips.map((tip, index) => (
+                  <div 
+                    key={index} 
+                    className={`${tip.color} border border-gray-700 rounded-lg p-4 hover:transform hover:scale-105 transition duration-300`}
+                  >
+                    <div className="flex items-center mb-2">
+                      <span className="mr-2">{tip.icon}</span>
+                      <h4 className="font-medium text-white">{tip.title}</h4>
+                    </div>
+                    <p className="text-gray-300 text-sm">{tip.description}</p>
+                  </div>
+                ))}
+              </div>
+              
+              <div className="mt-6 p-3 bg-amber-500/10 border border-amber-500/30 rounded-lg">
+                <h4 className="font-medium text-amber-300 mb-1">Last-Minute Advice:</h4>
+                <ul className="text-gray-300 text-sm list-disc list-inside space-y-1">
+                  <li>Review your most challenging topics one final time</li>
+                  <li>Get a good night's sleep and eat a light meal before the exam</li>
+                  <li>Have your ID card and other required documents ready</li>
+                  <li>Arrive at the test center at least 30 minutes early</li>
+                  <li>Take deep breaths if you feel anxious during the exam</li>
+                </ul>
+              </div>
+            </div>
+          )}
+        </div>
+        
         <div className="mt-6 text-center">
           <p className="text-gray-400 text-sm">
             From everyone at NPTEL Practice, we believe in you!
@@ -115,6 +208,13 @@ export const ExamWishesBanner: React.FC = () => {
         }
         .animate-fall {
           animation: fall linear forwards;
+        }
+        .animate-fadeIn {
+          animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(-10px); }
+          to { opacity: 1; transform: translateY(0); }
         }
       `}</style>
     </div>
