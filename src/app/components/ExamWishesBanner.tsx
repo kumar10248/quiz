@@ -1,5 +1,4 @@
-// ExamWishesBanner.tsx
-"use client"
+"use client";
 import React, { useState, useEffect } from 'react';
 import { FaGraduationCap, FaStar } from 'react-icons/fa';
 
@@ -13,7 +12,7 @@ interface ConfettiProps {
   animationDuration: string;
 }
 
-const ExamWishesBanner: React.FC = () => {
+export const ExamWishesBanner: React.FC = () => {
   const [showConfetti, setShowConfetti] = useState<boolean>(false);
   
   useEffect(() => {
@@ -121,5 +120,3 @@ const ExamWishesBanner: React.FC = () => {
     </div>
   );
 };
-
-export default ExamWishesBanner;
