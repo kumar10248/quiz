@@ -1,3 +1,5 @@
+/* eslint-disable rule-name */
+
 "use client";
 import React, { useState, useEffect } from 'react';
 import { FaGraduationCap, FaStar } from 'react-icons/fa';
