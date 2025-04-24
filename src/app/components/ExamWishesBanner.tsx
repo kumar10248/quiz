@@ -183,7 +183,7 @@ export const ExamWishesBanner: React.FC = () => {
                 <h4 className="font-medium text-amber-300 mb-1">Last-Minute Advice:</h4>
                 <ul className="text-gray-300 text-sm list-disc list-inside space-y-1">
                   <li>Review your most challenging topics one final time</li>
-                  <li>Get a good night's sleep and eat a light meal before the exam</li>
+                  <li>Get a good night&apos;s sleep and eat a light meal before the exam</li>
                   <li>Have your ID card and other required documents ready</li>
                   <li>Arrive at the test center at least 30 minutes early</li>
                   <li>Take deep breaths if you feel anxious during the exam</li>
