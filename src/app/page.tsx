@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { FaBook, FaClock, FaGraduationCap, FaInstagram, FaGithub, FaTwitter, FaCode, FaLinkedinIn, FaDownload, FaArrowRight } from 'react-icons/fa';
+import ExamWishesBanner from './comoonents/ExamWishesBanner';
 
 export default function Home() {
   return (
@@ -30,7 +31,7 @@ export default function Home() {
             <FaTwitter />
           </a>
         </div>
-        
+        <ExamWishesBanner/>
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-20 relative">
             {/* Glowing heading with animated gradient border */}
